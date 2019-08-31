@@ -1,8 +1,8 @@
 # WebProject-YourAnimeList
  The motivation for the project was creating an anime database that we can have users classify their most favorite anime and evaluate them. Thus, the creation of this projected originated from an idea of having our centralized anime database where we can add anime reviews about different anime we have watched and see how it was received by others. This project was based on the idea that anyone can go to the website and look at the descriptions, reviews of each show before picking it up.
 
-# Rule
-Users can sign up or log in on any page
-Users can search for an anime using the search bar or select an anime from the main page
-Users can leave a review on the anime’s page if they are logged in
-That user’s reviews can be viewed from their user page after they are submitted
+# Overall
+The website basically has 3 sections: a home page, anime pages, and user pages. All pages allow user to login, sign in or sign out from the website. To create the user login system, we use PHP, and SQL to make it functionable. We store the username and password to the SQL, and check if the user name exists when a user tries to login. After a user logs in, we save the username in the JavaScript cookie and keep the login status until they sign out. When the user login to the website, it will switch the page to user page and user can see their username and their pervious reviews in the website. If the users want to go back to home page, they can press the icon on the left top and it will bring the user back to the home page. All pages have the same function of it. We also create a live search bar that below the icon with Ajax, users can use that to search all anime name. 
+The home page mostly contains all the anime pictures in the webpage. When the user clicks the image, it will switch the page to the anime page and show the relative information in the page. The user can also write the review and read the review from the other user.  
+
+The sample pictures are in the folder.
