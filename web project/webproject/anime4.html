@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Anime4</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="anime.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      // kill me later
+    </script>
+</head>
+<header>
+    <!--header-->
+    <div class="header">
+        <div class=imgHeader>
+            <a href="home.html"><img src="images/icon.png" alt="Icon" title="icon" style="width:160px;height:130px"></a>
+        </div>
+        <div class="btnOptions"> 
+                <button type="button" onclick="openFormLogin()" id="LoginButton">Login</button>
+                <button type="button" onclick="openFormRegister()" id="SignupButton">Sign up</button>
+                <button type="button" onclick="window.location.href='userpage.html'"id= userpagebutton>User Page</button>
+                <button type="button" onclick="signout()" id="signoutButton">Sign Out</button>
+        </div>
+    </div>
+    <!--search button-->
+    <div class="searchbar">
+        <input type="text" placeholder="Search..">
+        <div class="result"></div>
+    </div>
+    <!--(Sign up)popup box-->
+    <div class="form-popup" id="RegisterForm">
+        <form action="register.php" class="form-container" method="POST">
+            <h1>Register</h1>
+
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <button type="submit" class="btn">Register</button>
+            
+        </form>
+        <button type="cancel" class="btn cancel" onclick="closeFormRegister()">Close</button>
+    </div>
+    <!--(Login)popup box-->
+    <div class="form-popup" id="LoginForm">
+            <form id="MyForm">
+                <h1>Login</h1>
+    
+                <label for="username"><b>Username</b></label>
+                <input id="name" type="text" placeholder="Enter Username" name="username" required>
+    
+                <label for="password"><b>Password</b></label>
+                <input id="pass" type="password" placeholder="Enter Password" name="password" required>
+    
+                <button id="loginButton" type="submit" class="btn">Login</button>
+            </form>
+            <button class="btn cancel" onclick="closeFormLogin()">Close</button>
+        </div>
+</header>
+<!--body-->
+<body>
+    <section>
+    <br>
+    <div class="left">
+        <img src="images/anime4.jpg" alt="AnimeA" title="anime A" style="width:200px;height:200px">
+        <br>
+        <h3>Anime Title :</h3>
+        <p id="titleText" name="Death Note">Death Note</p>
+        <br>
+        <h3>Details :</h3>
+        <p>Mystery</p>
+    </div>
+    <div class="righttop">
+        <h3>Score :</h3>
+        <p>10/10</p>
+        <br>
+        <h3>Description:</h3>
+        <p>The series centers around a high school student who discovers a supernatural notebook that allows him to kill anyone by writing the victim's name while picturing their face.</p>
+    </div>
+    <br>
+    <div class="rightbottom">
+        <button type="button" onclick="showUser()">View Review</button>
+        <div class="userreview" id="userview">
+        </div>
+    </div>
+    <br>
+    <div class="leftbottom" id="reviewsection">
+        <form id="reviewForm" action="insert.php" method="POST">
+            <p>Score: </p>
+            <input type="number" name="score" min="0" max="10" required>
+            <br>
+            <textarea name="review" rows="10" cols="30" required>Review</textarea>
+            <br>
+            <button id="reviewButton" type="button" onclick="alert('Posted')">Post</button>
+    </div>
+    <script src="anime.js"></script>
+</section>
+</body>
+
+</html>
+
+
+

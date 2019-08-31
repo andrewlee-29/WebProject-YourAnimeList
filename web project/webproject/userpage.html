@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <title>User</title>
+   <link rel="stylesheet" href="reset.css" />
+   <link rel="stylesheet" href="userpage.css" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript"></script>
+</head>
+<header>
+   <!--header-->
+   <div class="header">
+       <div class=imgHeader>
+           <a href="home.html"><img src="images/icon.png" alt="Icon" title="icon" style="width:160px;height:130px"></a>
+       </div>
+       <div class="btnOptions"> 
+               <button type="button" onclick="openFormLogin()" id="LoginButton">Login</button>
+               <button type="button" onclick="openFormRegister()" id="SignupButton">Sign up</button>
+               <button type="button" onclick="window.location.href='userpage.html'"id= userpagebutton>User Page</button>
+               <button type="button" onclick="signout()" id="signoutButton">Sign Out</button>
+       </div>
+   </div>
+   <!--search button-->
+   <div class="searchbar">
+       <input type="text" placeholder="Search..">
+       <div class="result"></div>
+   </div>
+   <!--(Sign up)popup box-->
+   <div class="form-popup" id="RegisterForm">
+       <form action="register.php" class="form-container" method="POST">
+           <h1>Register</h1>
+
+           <label for="username"><b>Username</b></label>
+           <input type="text" placeholder="Enter Username" name="username" required>
+
+           <label for="password"><b>Password</b></label>
+           <input type="password" placeholder="Enter Password" name="password" required>
+
+           <button type="submit" class="btn">Register</button>
+           
+       </form>
+       <button type="cancel" class="btn cancel" onclick="closeFormRegister()">Close</button>
+   </div>
+   <!--(Login)popup box-->
+   <div class="form-popup" id="LoginForm">
+           <form id="MyForm">
+               <h1>Login</h1>
+   
+               <label for="username"><b>Username</b></label>
+               <input id="name" type="text" placeholder="Enter Username" name="username" required>
+   
+               <label for="password"><b>Password</b></label>
+               <input id="pass" type="password" placeholder="Enter Password" name="password" required>
+   
+               <button id="loginButton" type="submit" class="btn">Login</button>
+           </form>
+           <button class="btn cancel" onclick="closeFormLogin()">Close</button>
+       </div>
+</header>
+
+<body>
+    <section>
+   <br>
+   <div class="left">
+      <img src="images/defaultpic.png" alt="AnimeA" title="anime A" style="width:200px;height:200px">
+      <br>
+      <h3>Username :</h3>
+      <p id="username"> username display</p>
+   </div>
+   <div class="righttop">
+      <h3>Review :</h3>
+      <button type="button" onclick="showUser()">View Review</button>
+      <div class="userreview" id="userview">
+    </div>
+   </div>
+   <script src="userpage.js"></script>
+</section>
+</body>
+
+</html>

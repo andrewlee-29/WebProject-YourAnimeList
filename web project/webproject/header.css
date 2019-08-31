@@ -1,0 +1,26 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+.btnOptions{
+    position: right;
+    display: inline-block; 
+    margin-right: 30px;
+    margin-top:30px;
+}
+input[type=text] {
+    width: 100%;
+    border: 2px solid #ccc;  
+  }
+.header{
+    background-color: white;
+}
+button{
+    background-color: #e91e63;
+    color: white;
+    border:none;
+    text-align: center;
+    font-size:13px;
+    padding: 15px 20px;
+    border-radius: 12px;
+ }
